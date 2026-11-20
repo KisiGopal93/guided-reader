@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +65,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -74,7 +76,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    button, input, select, textarea {
+    button,
+    input,
+    select,
+    textarea {
       font-family: inherit;
     }
 
@@ -369,7 +374,8 @@
       flex-shrink: 0;
     }
 
-    .banner.error, .banner.red {
+    .banner.error,
+    .banner.red {
       background: var(--red-bg);
       border-color: var(--red);
       color: var(--red);
@@ -555,6 +561,7 @@
     }
 
     @media (max-width: 640px) {
+
       .setting-item.span-3,
       .setting-item.span-4 {
         grid-column: span 6;
@@ -597,7 +604,7 @@
       flex-wrap: wrap;
     }
 
-    .room-row > div {
+    .room-row>div {
       flex: 1 1 180px;
       min-width: 0;
     }
@@ -761,8 +768,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.35; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.35;
+      }
     }
 
     .meter-wrap {
@@ -803,9 +817,17 @@
       white-space: nowrap;
     }
 
-    .meter-status.red { color: var(--red); }
-    .meter-status.amber { color: var(--amber); }
-    .meter-status.green { color: var(--green); }
+    .meter-status.red {
+      color: var(--red);
+    }
+
+    .meter-status.amber {
+      color: var(--amber);
+    }
+
+    .meter-status.green {
+      color: var(--green);
+    }
 
     /* Teleprompter Stage */
     .stage-wrap {
@@ -1147,9 +1169,23 @@
       text-transform: uppercase;
     }
 
-    .verdict-pill.green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
-    .verdict-pill.amber { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber); }
-    .verdict-pill.red { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+    .verdict-pill.green {
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .verdict-pill.amber {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber);
+    }
+
+    .verdict-pill.red {
+      background: var(--red-bg);
+      color: var(--red);
+      border: 1px solid var(--red);
+    }
 
     .verdict-cards {
       display: grid;
@@ -1165,9 +1201,20 @@
       padding: 11px 13px;
     }
 
-    .verdict-card.green { border-color: var(--green); background: var(--green-bg); }
-    .verdict-card.amber { border-color: var(--amber); background: var(--amber-bg); }
-    .verdict-card.red { border-color: var(--red); background: var(--red-bg); }
+    .verdict-card.green {
+      border-color: var(--green);
+      background: var(--green-bg);
+    }
+
+    .verdict-card.amber {
+      border-color: var(--amber);
+      background: var(--amber-bg);
+    }
+
+    .verdict-card.red {
+      border-color: var(--red);
+      background: var(--red-bg);
+    }
 
     .verdict-big {
       font-size: 24px;
@@ -1289,25 +1336,206 @@
       color: var(--accent);
       pointer-events: none;
     }
+
+    /* AI Script Generator (additive) */
+    .input-mode-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .ai-panel {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Sidebar sections (additive) */
+    .sub-heading { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin: 10px 0 6px; padding-top: 8px; border-top: 1px solid var(--border); }
+    .settings-card .sub-heading:first-of-type { margin-top: 2px; }
+    .room-card .sub-heading { margin-top: 0; padding-top: 0; border-top: 0; color: var(--text-muted); }
+    .settings-card .settings-grid { flex: none; align-content: start; }
+    .setting-item.span-6 { grid-column: span 6; }
+    .setting-item .btn { width: 100%; }
+    .primary-action { flex: 0 0 auto; padding: 2px 0 6px; }
+    .primary-action .btn-big { width: 100%; box-sizing: border-box; }
+    .ai-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .ai-grid {
+      flex: none;
+      align-content: start;
+    }
+
+    .ai-panel textarea {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      font: inherit;
+      font-size: 13px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      resize: vertical;
+    }
+
+    .ai-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ai-status {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .ai-status.error {
+      color: var(--red);
+    }
+
+    .ai-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+  
+    /* ===== Prepare screen redesign (additive overrides) ===== */
+    .topbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; padding: 10px 18px; }
+    .topbar .brand { justify-self: start; }
+    .topbar .tabs { justify-self: center; }
+    .topbar .quick-toggles { justify-self: end; }
+    @media (max-width: 820px) {
+      .topbar { display: flex; justify-content: space-between; }
+    }
+    .brand-logo { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, #4f9cf9, #7c3aed); }
+    .offline-pill { display: inline-flex; align-items: center; gap: 7px; padding: 4px 12px; font-size: 12px; }
+    .tabs { gap: 14px; }
+    .tab-btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; padding: 8px 14px; }
+    .tab-btn.active { background: transparent; color: var(--text); border-bottom-color: var(--accent); }
+    .tab-num { width: 22px; height: 22px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 12px; background: var(--surface-2); color: var(--text-muted); }
+    .tab-btn.active .tab-num { background: var(--accent); color: var(--accent-ink); }
+    .tab-count { font-size: 11px; opacity: 0.7; margin-left: 2px; }
+    #btnThemeToggle::before { content: "\25D0"; margin-right: 4px; }
+
+    .script-input-card { gap: 0; }
+    .prep-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .prep-ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; color: var(--accent); background: rgba(79, 156, 249, 0.14); flex: 0 0 auto; }
+    .prep-text { flex: 1; min-width: 0; }
+    .prep-title { font-size: 17px; font-weight: 700; }
+    .prep-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .btn-ai { position: relative; background: linear-gradient(135deg, #7c3aed, #a855f7); border-color: transparent; color: #fff; padding: 10px 18px; border-radius: 10px; }
+    .btn-ai.btn-active { background: linear-gradient(135deg, #7c3aed, #a855f7); color: #fff; outline: 2px solid #c4b5fd; border-color: transparent; }
+    .input-mode-row { gap: 10px; margin-bottom: 10px; }
+    .input-mode-row .btn { padding: 10px 20px; border-radius: 10px; font-size: 14px; }
+    .input-mode-row .btn.btn-active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+    .drop-zone { padding: 8px 12px; margin-bottom: 10px; }
+
+    .editor-wrap { position: relative; display: flex; flex: 1 1 auto; min-height: 260px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .editor-gutter { flex: 0 0 48px; overflow: hidden; padding: 14px 8px 14px 0; text-align: right; color: var(--text-muted); font: 13px/1.6 ui-monospace, Consolas, monospace; background: rgba(255, 255, 255, 0.02); border-right: 1px solid var(--border); user-select: none; }
+    .editor-wrap .script-textarea { flex: 1 1 auto; min-height: 0; height: auto; margin: 0; border: 0; border-radius: 0; background: transparent; padding: 14px 52px 14px 14px; font: 14px/1.6 ui-monospace, Consolas, "Noto Sans Devanagari", monospace; color: var(--text); resize: none; outline: none; }
+    .editor-tools { position: absolute; top: 8px; right: 8px; display: flex; gap: 4px; }
+    .icon-btn { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-muted); cursor: pointer; }
+    .icon-btn:hover { color: var(--text); }
+    .editor-foot { display: flex; justify-content: space-between; align-items: center; padding: 8px 4px 2px; font-size: 12px; color: var(--text-muted); }
+    .editor-count { display: inline-flex; align-items: center; gap: 8px; }
+    .link-btn { display: inline-flex; align-items: center; gap: 6px; background: transparent; border: 0; color: var(--accent); font-size: 13px; font-weight: 600; cursor: pointer; padding: 4px 6px; }
+    .editor-foot .link-btn { color: var(--text-muted); }
+
+    .toolbar-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 12px; padding: 10px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; }
+    .toolbar-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .toolbar-btns .btn { padding: 9px 16px; border-radius: 10px; background: var(--surface); }
+    .toolbar-btns .btn svg { color: var(--accent); }
+    .toolbar-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--text-muted); }
+
+    .setup-side-col { gap: 10px; }
+    .setup-side-col .plan-card { flex: 0 0 auto; }
+    @media (min-width: 961px) {
+      .setup-grid { grid-template-columns: minmax(0, 1fr) clamp(480px, 42vw, 570px); }
+    }
+    .plan-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+    .plan-head-right { display: inline-flex; align-items: center; gap: 10px; }
+    .sb-title { display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 700; }
+    .sb-ico { width: 26px; height: 26px; border-radius: 8px; display: inline-grid; place-items: center; color: var(--accent); background: rgba(79, 156, 249, 0.14); flex: 0 0 auto; }
+    .plan-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .ps-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 4px 6px; border-left: 1px solid var(--border); text-align: center; }
+    .ps-item:first-child { border-left: 0; }
+    .ps-ico { display: grid; place-items: center; }
+    .ps-ico.c-purple { color: #a78bfa; } .ps-ico.c-blue { color: #4f9cf9; } .ps-ico.c-blue2 { color: #38bdf8; }
+    .ps-val { font-size: 20px; font-weight: 800; line-height: 1.15; }
+    .ps-lbl { font-size: 11.5px; color: var(--text-muted); }
+    .plan-more { margin-top: 8px; font-size: 12.5px; color: var(--text-muted); }
+    .plan-more summary { cursor: pointer; }
+    .plan-more-body { margin-top: 8px; }
+    .sb-section { padding: 0; }
+    .sb-section > summary { display: flex; align-items: center; gap: 8px; padding: 10px 14px; cursor: pointer; list-style: none; font-size: 14.5px; font-weight: 700; }
+    .sb-section > summary::-webkit-details-marker { display: none; }
+    .sb-section > summary::after { content: ""; width: 8px; height: 8px; margin-left: auto; border-right: 2px solid var(--text-muted); border-top: 2px solid var(--text-muted); transform: rotate(-45deg); transition: transform 0.15s; }
+    .sb-section:not([open]) > summary::after { transform: rotate(135deg); }
+    .reset-mini { padding: 4px 10px; font-size: 12px; }
+    .sb-body { padding: 0 14px 12px; }
+    .tile-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tile { display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 12px; border: 1px solid; text-align: left; color: var(--text); font-size: 13px; font-weight: 600; min-width: 0; }
+    .tile-room { cursor: pointer; border-color: var(--accent); background: rgba(79, 156, 249, 0.1); }
+    .tile-count { border-color: #7c3aed; background: rgba(124, 58, 237, 0.14); }
+    .tile-ico { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: rgba(255, 255, 255, 0.06); flex: 0 0 auto; }
+    .tile-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+    .tile-s { font-size: 11.5px; font-weight: 600; color: var(--green); }
+    .tile-count input { width: 52px; padding: 5px 6px; border-radius: 6px; background: var(--bg); color: var(--text); border: 1px solid var(--border); font-size: 13px; }
+    .display-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 13.5px; }
+    .display-row .inline-row { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); }
+    .inline-row select, .audio-row select { padding: 6px 10px; border-radius: 8px; background: var(--bg); color: var(--text); border: 1px solid var(--border); font-size: 13.5px; }
+    .vsep { width: 1px; height: 26px; background: var(--border); }
+    .switch { position: relative; width: 44px; height: 24px; display: inline-block; flex: 0 0 auto; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .switch .slider { position: absolute; inset: 0; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
+    .switch .slider::before { content: ""; position: absolute; width: 18px; height: 18px; left: 2px; top: 2px; border-radius: 50%; background: #fff; transition: transform 0.15s; }
+    .switch input:checked + .slider { background: var(--accent); }
+    .switch input:checked + .slider::before { transform: translateX(20px); }
+    .pace-label { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--text-muted); margin-bottom: 5px; }
+    .pace-label strong { color: var(--text); text-transform: uppercase; }
+    .pace-grid { margin-top: 10px; flex: none; align-content: start; gap: 8px 8px; }
+    .pace-grid .setting-label { font-size: 12px; }
+    .pace-grid input[type="number"] { font-size: 13.5px; padding: 6px 8px; }
+    .pace-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
+    .settings-saved { font-size: 11.5px; color: var(--text-muted); margin: 0; }
+    .audio-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .audio-row .stack { display: flex; flex-direction: column; gap: 5px; flex: 1 1 150px; }
+    .audio-row .stack .setting-label { font-size: 12.5px; }
+    .audio-row .stack select { width: 100%; }
+    .check-inline { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; cursor: pointer; padding-bottom: 6px; }
+    .primary-action .btn-big { height: 46px; font-size: 15px; border-radius: 12px; background: linear-gradient(90deg, #2f80ff, #4f9cf9); border-color: transparent; color: #fff; }
+    .primary-action .btn-big:disabled { opacity: 0.5; }
   </style>
 </head>
+
 <body data-theme="dark">
   <div class="app">
     <header class="topbar">
       <div class="brand">
+        <span class="brand-logo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
         <span class="brand-title">Guided Reader</span>
-        <span class="offline-pill">Offline · Mic never leaves browser</span>
+        <span class="offline-pill">Offline: Mic never leaves browser</span>
       </div>
 
       <nav class="tabs" aria-label="Main sections">
-        <button class="tab-btn active" data-tab="setup" id="tabSetup">1. Script &amp; Plan</button>
-        <button class="tab-btn" data-tab="read" id="tabRead">2. Read</button>
-        <button class="tab-btn" data-tab="report" id="tabReport">3. Report &amp; Takes (<span id="takeCountBadge">0</span>)</button>
+        <button class="tab-btn active" data-tab="setup" id="tabSetup"><span class="tab-num">1</span>Prepare</button>
+        <button class="tab-btn" data-tab="read" id="tabRead"><span class="tab-num">2</span>Read</button>
+        <button class="tab-btn" data-tab="report" id="tabReport"><span class="tab-num">3</span>Review<span class="tab-count">(<span id="takeCountBadge">0</span>)</span></button>
       </nav>
 
       <div class="quick-toggles">
         <button class="btn" id="btnThemeToggle" title="Switch light or dark theme">Light Theme</button>
-        <button class="btn" id="btnMirrorToggle" title="Flip text horizontally for a glass teleprompter">Mirror: Off</button>
       </div>
     </header>
 
@@ -1315,13 +1543,59 @@
     <main class="view active" id="viewSetup">
       <div class="setup-grid">
         <section class="card script-input-card">
-          <h2>
-            <span>Script Input</span>
-            <span class="inline-field">
-              <label for="takePrefixInput">Take prefix:</label>
-              <input type="text" id="takePrefixInput" value="take" size="14" title="Prefix used when naming saved takes">
-            </span>
-          </h2>
+          <div class="prep-head">
+            <div class="prep-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="prep-text">
+              <div class="prep-title">Prepare your script</div>
+              <div class="prep-sub">Upload, paste or generate a script, then configure your reading plan.</div>
+            </div>
+            <button class="btn btn-ai" id="btnModeAi" type="button"><span class="ai-spark">✦</span> Generate with AI</button>
+          </div>
+
+          <div class="input-mode-row" id="inputModeRow">
+            <button class="btn btn-active" id="btnModeManual" type="button"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> Upload / Paste</button>
+          </div>
+
+          <div class="ai-panel hidden" id="aiPanel">
+            <h3 class="ai-title">AI Script Generator</h3>
+            <div class="settings-grid ai-grid">
+              <div class="setting-item full">
+                <label class="setting-label" for="aiTopic"><span>Topic or context</span></label>
+                <textarea id="aiTopic" rows="3" maxlength="1500"
+                  placeholder="e.g. How does rain form? Explain to a 12-year-old."></textarea>
+              </div>
+              <div class="setting-item span-3">
+                <label class="setting-label" for="aiLang"><span>Language</span></label>
+                <select id="aiLang">
+                  <option value="en">English</option>
+                  <option value="ne">Nepali (नेपाली)</option>
+                </select>
+              </div>
+              <div class="setting-item span-3">
+                <label class="setting-label" for="aiMinutes"><span>Length (minutes)</span></label>
+                <input type="number" id="aiMinutes" min="0.5" max="10" step="0.5" value="2">
+              </div>
+              <div class="setting-item span-3">
+                <label class="setting-label" for="aiSections"><span>Sections</span></label>
+                <input type="number" id="aiSections" min="1" max="12" step="1" value="3">
+              </div>
+              <div class="setting-item span-3">
+                <label class="setting-label" for="aiTone"><span>Tone</span></label>
+                <select id="aiTone">
+                  <option value="calm">Calm storyteller</option>
+                  <option value="educational">Educational</option>
+                  <option value="energetic">Energetic</option>
+                </select>
+              </div>
+            </div>
+            <div class="ai-actions">
+              <button class="btn btn-primary" id="btnAiGenerate" type="button">Generate Script</button>
+              <span class="ai-status" id="aiStatus">Checking generator…</span>
+            </div>
+            <div class="ai-note">Only your topic text is sent to Google Gemini (free tier; Google may use free-tier
+              inputs to improve its products). The script appears in the box below so you can edit it, then click
+              <strong>Load Script</strong>.</div>
+          </div>
 
           <div class="drop-zone" id="dropZone">
             <div>
@@ -1334,23 +1608,28 @@
             </div>
           </div>
 
-          <textarea id="scriptPaste" class="script-textarea" placeholder="Or paste an episode script (markdown with ## Beat headings, or plain text)…"></textarea>
-
-          <div class="input-actions">
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-              <button class="btn btn-primary" id="btnLoadText">Load Script</button>
-              <button class="btn" id="btnLoadSample">Try Short Sample</button>
-              <button class="btn" id="btnClearScript">Clear</button>
+          <div class="editor-wrap" id="editorWrap">
+            <div class="editor-gutter" id="editorGutter" aria-hidden="true"></div>
+            <textarea id="scriptPaste" class="script-textarea" spellcheck="false"
+              placeholder="Or paste an episode script (markdown with ## Beat headings, or plain text)…"></textarea>
+            <div class="editor-tools">
+              <button class="icon-btn" id="btnUndo" type="button" title="Undo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></button>
+              <button class="icon-btn" id="btnRedo" type="button" title="Redo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></button>
             </div>
-            <span class="inline-field" id="loadedFilenameLabel">No file loaded</span>
           </div>
+          <div class="editor-foot">
+            <span class="editor-count"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> <span id="editorCount">0 words • 0 min est.</span></span>
+          </div>
+
+          
 
           <div id="parseErrorBanner" class="banner error hidden"></div>
 
           <div id="outlineSection" class="outline-section hidden">
             <div class="outline-header">
               <strong style="font-size:13px;">Sections &amp; Paragraphs (click to choose what to read)</strong>
-              <select id="practiceScopeSelect" style="font-size:12px; padding:4px 8px; border-radius:6px; background:var(--bg); color:var(--text); border:1px solid var(--border);">
+              <select id="practiceScopeSelect"
+                style="font-size:12px; padding:4px 8px; border-radius:6px; background:var(--bg); color:var(--text); border:1px solid var(--border);">
                 <option value="all">Read full script</option>
                 <option value="from">Read from selected paragraph to end</option>
                 <option value="single">Practice selected paragraph only</option>
@@ -1358,131 +1637,140 @@
             </div>
             <div class="outline-list" id="outlineList"></div>
           </div>
+        <div class="toolbar-bar">
+            <div class="toolbar-btns">
+              <button class="btn" id="btnLoadText"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> Load Script</button>
+              <button class="btn" id="btnLoadSample"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Try Short Sample</button>
+              <button class="btn" id="btnClearScript"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg> Clear</button>
+            </div>
+            <div class="toolbar-meta">
+              <span class="inline-field" id="loadedFilenameLabel">No file loaded</span>
+              <span class="inline-field">
+                <label for="takePrefixInput">Take prefix:</label>
+                <input type="text" id="takePrefixInput" value="take" size="12" title="Prefix used when naming saved takes">
+              </span>
+            </div>
+          </div>
         </section>
 
         <div class="setup-side-col">
           <section class="card plan-card">
-            <h2>
-              <span>Timing Plan</span>
-              <span class="inline-field">
-                <label for="langSelect">Language:</label>
-                <select id="langSelect">
-                  <option value="auto">Auto</option>
-                  <option value="en">English</option>
-                  <option value="ne">Nepali (नेपाली)</option>
-                </select>
-              </span>
-            </h2>
-
-            <div class="stats-grid">
-              <div class="stat-box">
-                <div class="stat-label">Sections</div>
-                <div class="stat-value" id="statSections">—</div>
-                <div class="stat-sub" id="statSectionsSub">beats</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-label">Spoken Words</div>
-                <div class="stat-value" id="statWords">—</div>
-                <div class="stat-sub" id="statWordsSub">words</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-label">Sentences / Paras</div>
-                <div class="stat-value" id="statSentsParas">—</div>
-                <div class="stat-sub" id="statLangSub">language</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-label">Total Time</div>
-                <div class="stat-value" id="statTotalTime">—</div>
-                <div class="stat-sub" id="statPauseTime">pauses: —</div>
+            <div class="plan-head">
+              <div class="sb-title"><span class="sb-ico blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>Reading Plan &amp; Settings</div>
+              <div class="plan-head-right">
+                <span class="inline-field">
+                  <label for="langSelect">Language:</label>
+                  <select id="langSelect">
+                    <option value="auto">Auto</option>
+                    <option value="en">English</option>
+                    <option value="ne">Nepali (नेपाली)</option>
+                  </select>
+                </span>
+                <button class="link-btn" id="btnEditPlan" type="button"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Edit Plan</button>
               </div>
             </div>
-
-            <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
-              <div class="stat-box">
-                <div class="stat-label">Target OVERALL Speed (pauses included)</div>
-                <div class="stat-value" id="statOverallWpm">145 wpm</div>
-                <div class="stat-sub">First sound to last sound</div>
-              </div>
-              <div class="stat-box">
-                <div class="stat-label">Speaking-Only Speed (info only)</div>
-                <div class="stat-value" id="statSpeakingWpm">—</div>
-                <div class="stat-sub">Words without pause time</div>
-              </div>
+            <div class="plan-stats">
+              <div class="ps-item"><span class="ps-ico c-purple"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><div class="ps-val" id="statOverallWpm">145 wpm</div><div class="ps-lbl">Target Speed</div></div>
+              <div class="ps-item"><span class="ps-ico c-blue"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><div class="ps-val" id="statSections">—</div><div class="ps-lbl">Sections</div></div>
+              <div class="ps-item"><span class="ps-ico c-blue2"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span><div class="ps-val" id="statWords">—</div><div class="ps-lbl">Words</div></div>
+              <div class="ps-item"><span class="ps-ico c-blue"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="ps-val" id="statTotalTime">—</div><div class="ps-lbl">Est. Time</div></div>
             </div>
-
-            <div id="planWarningBanner" class="banner amber hidden"></div>
-
-            <div class="cta-row">
-              <button class="btn btn-primary btn-big" id="btnStartReading" disabled>Open Reading Screen</button>
-              <label class="inline-field" style="font-size:13px; color:var(--text); cursor:pointer;">
-                <input type="checkbox" id="chkRecordWhileReading" checked>
-                Record microphone while reading
-              </label>
-            </div>
-          </section>
-
-          <section class="card room-card">
-            <h2>5-Second Room Check</h2>
-            <div class="room-row">
-              <div>
-                <div style="font-size:12px; color:var(--text-muted);">Stay silent for 5 seconds before your first take:</div>
-                <div class="room-dbfs" id="roomFloorReadout">Not checked yet</div>
-              </div>
-              <button class="btn btn-primary" id="btnRoomCheck">Run 5s Room Check</button>
-            </div>
-            <div id="roomCheckBanner" class="banner hidden"></div>
-          </section>
-
-          <section class="card settings-card">
-            <h2>
-              <span>Settings (saved automatically)</span>
-              <button class="btn" id="btnResetSettings" style="padding:3px 8px; font-size:11px;">Reset defaults</button>
-            </h2>
-            <div class="settings-grid">
-              <div class="setting-item full">
-                <div class="setting-label">
-                  <span>Target OVERALL speed (110–190 wpm)</span>
-                  <strong id="lblTargetWpm">145 wpm</strong>
+            <details class="plan-more" id="planMore">
+              <summary>More details</summary>
+              <div class="plan-more-body">
+                <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                  <div class="stat-box"><div class="stat-label">Sections</div><div class="stat-sub" id="statSectionsSub">beats</div></div>
+                  <div class="stat-box"><div class="stat-label">Spoken words</div><div class="stat-sub" id="statWordsSub">words</div></div>
+                  <div class="stat-box"><div class="stat-label">Sentences / Paras</div><div class="stat-value" id="statSentsParas">—</div><div class="stat-sub" id="statLangSub">language</div></div>
+                  <div class="stat-box"><div class="stat-label">Pauses</div><div class="stat-sub" id="statPauseTime">pauses: —</div></div>
+                  <div class="stat-box" style="grid-column: span 2;"><div class="stat-label">Speaking-only speed (info only)</div><div class="stat-value" id="statSpeakingWpm">—</div><div class="stat-sub">Words without pause time</div></div>
                 </div>
-                <input type="range" id="rngTargetWpm" min="110" max="190" step="1" value="145">
               </div>
+            </details>
+            <div id="planWarningBanner" class="banner amber hidden"></div>
+          </section>
 
-              <div class="setting-item span-3">
-                <label class="setting-label" for="numSentencePause"><span>Sentence pause (s)</span></label>
-                <input type="number" id="numSentencePause" min="0" max="5" step="0.05" value="0.50">
+          <details class="card sb-section" id="secQuick" open>
+            <summary><span class="sb-ico blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Quick Controls</summary>
+            <div class="sb-body">
+              <div class="tile-row">
+                <button class="tile tile-room" id="btnRoomCheck" type="button">
+                  <span class="tile-ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+                  <span class="tile-text"><span class="tile-t">5-Second Room Check</span><span class="tile-s" id="roomFloorReadout">Not checked yet</span></span>
+                </button>
+                <div class="tile tile-count">
+                  <span class="tile-ico"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                  <label class="tile-text" for="numCountIn"><span class="tile-t">Count-in (seconds)</span></label>
+                  <input type="number" id="numCountIn" min="0" max="10" step="1" value="3">
+                </div>
               </div>
+              <div id="roomCheckBanner" class="banner hidden"></div>
+            </div>
+          </details>
 
-              <div class="setting-item span-3">
-                <label class="setting-label" for="numCommaPause"><span>Comma / ; / : pause (s)</span></label>
-                <input type="number" id="numCommaPause" min="0" max="3" step="0.05" value="0.15">
-              </div>
-
-              <div class="setting-item span-3">
-                <label class="setting-label" for="numParaPause"><span>Paragraph end pause (s)</span></label>
-                <input type="number" id="numParaPause" min="0" max="5" step="0.05" value="0.80">
-              </div>
-
-              <div class="setting-item span-3">
-                <label class="setting-label" for="numBeatPause"><span>Beat end pause (s)</span></label>
-                <input type="number" id="numBeatPause" min="0" max="6" step="0.05" value="1.00">
-              </div>
-
-              <div class="setting-item span-4">
-                <label class="setting-label" for="numCountIn"><span>Count-in (seconds)</span></label>
-                <input type="number" id="numCountIn" min="0" max="10" step="1" value="3">
-              </div>
-
-              <div class="setting-item span-4">
-                <label class="setting-label" for="numFontSize"><span>Font size (px)</span></label>
-                <input type="number" id="numFontSize" min="32" max="92" step="2" value="56">
-              </div>
-
-              <div class="setting-item span-4">
-                <label class="setting-label" for="numQuietDbfs"><span>Quiet floor threshold (dBFS)</span></label>
-                <input type="number" id="numQuietDbfs" min="-70" max="-25" step="1" value="-45">
+          <details class="card sb-section" id="secDisplay" open>
+            <summary><span class="sb-ico blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Display Settings</summary>
+            <div class="sb-body">
+              <div class="display-row">
+                <label class="inline-row" for="numFontSize"><span>Font Size</span>
+                  <select id="numFontSize"><option value="32">32 px</option><option value="34">34 px</option><option value="36">36 px</option><option value="38">38 px</option><option value="40">40 px</option><option value="42">42 px</option><option value="44">44 px</option><option value="46">46 px</option><option value="48">48 px</option><option value="50">50 px</option><option value="52">52 px</option><option value="54">54 px</option><option value="56" selected>56 px</option><option value="58">58 px</option><option value="60">60 px</option><option value="62">62 px</option><option value="64">64 px</option><option value="66">66 px</option><option value="68">68 px</option><option value="70">70 px</option><option value="72">72 px</option><option value="74">74 px</option><option value="76">76 px</option><option value="78">78 px</option><option value="80">80 px</option><option value="82">82 px</option><option value="84">84 px</option><option value="86">86 px</option><option value="88">88 px</option><option value="90">90 px</option><option value="92">92 px</option></select>
+                </label>
+                <span class="vsep"></span>
+                <span class="inline-row"><span>Mirror Mode</span>
+                  <label class="switch" title="Flip text horizontally for a glass teleprompter"><input type="checkbox" id="btnMirrorToggle" aria-label="Mirror mode"><span class="slider"></span></label>
+                </span>
               </div>
             </div>
-          </section>
+          </details>
+
+          <details class="card sb-section" id="secPace" open>
+            <summary><span class="sb-ico blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>Reading Pace</summary>
+            <div class="sb-body">
+              <div class="pace-label"><span>Target Speaking Speed</span><strong id="lblTargetWpm">145 wpm</strong></div>
+              <input type="range" id="rngTargetWpm" min="110" max="190" step="1" value="145" style="width:100%;">
+              <div class="settings-grid pace-grid">
+                <div class="setting-item span-6">
+                  <label class="setting-label" for="numSentencePause"><span>Sentence pause (s)</span></label>
+                  <input type="number" id="numSentencePause" min="0" max="5" step="0.05" value="0.50">
+                </div>
+                <div class="setting-item span-6">
+                  <label class="setting-label" for="numCommaPause"><span>Comma / ; / : pause (s)</span></label>
+                  <input type="number" id="numCommaPause" min="0" max="3" step="0.05" value="0.15">
+                </div>
+                <div class="setting-item span-6">
+                  <label class="setting-label" for="numParaPause"><span>Paragraph end pause (s)</span></label>
+                  <input type="number" id="numParaPause" min="0" max="5" step="0.05" value="0.80">
+                </div>
+                <div class="setting-item span-6">
+                  <label class="setting-label" for="numBeatPause"><span>Beat end pause (s)</span></label>
+                  <input type="number" id="numBeatPause" min="0" max="6" step="0.05" value="1.00">
+                </div>
+              </div>
+              <div class="pace-foot">
+                <div class="settings-saved">Settings are saved automatically.</div>
+                <button class="btn reset-mini" id="btnResetSettings" type="button">Reset defaults</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="card sb-section" id="secAudio" open>
+            <summary><span class="sb-ico blue"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>Audio Settings</summary>
+            <div class="sb-body">
+              <div class="audio-row">
+                <label class="stack" for="numQuietDbfs"><span class="setting-label"><span>Quiet floor threshold (dBFS)</span></span>
+                  <select id="numQuietDbfs"><option value="-70">-70</option><option value="-69">-69</option><option value="-68">-68</option><option value="-67">-67</option><option value="-66">-66</option><option value="-65">-65</option><option value="-64">-64</option><option value="-63">-63</option><option value="-62">-62</option><option value="-61">-61</option><option value="-60">-60</option><option value="-59">-59</option><option value="-58">-58</option><option value="-57">-57</option><option value="-56">-56</option><option value="-55">-55</option><option value="-54">-54</option><option value="-53">-53</option><option value="-52">-52</option><option value="-51">-51</option><option value="-50">-50</option><option value="-49">-49</option><option value="-48">-48</option><option value="-47">-47</option><option value="-46">-46</option><option value="-45" selected>-45</option><option value="-44">-44</option><option value="-43">-43</option><option value="-42">-42</option><option value="-41">-41</option><option value="-40">-40</option><option value="-39">-39</option><option value="-38">-38</option><option value="-37">-37</option><option value="-36">-36</option><option value="-35">-35</option><option value="-34">-34</option><option value="-33">-33</option><option value="-32">-32</option><option value="-31">-31</option><option value="-30">-30</option><option value="-29">-29</option><option value="-28">-28</option><option value="-27">-27</option><option value="-26">-26</option><option value="-25">-25</option></select>
+                </label>
+                <label class="check-inline" for="chkRecordWhileReading">
+                  <input type="checkbox" id="chkRecordWhileReading" checked>
+                  <span>Record microphone while reading</span>
+                </label>
+              </div>
+            </div>
+          </details>
+
+          <div class="primary-action">
+            <button class="btn btn-primary btn-big" id="btnStartReading" disabled>▶ Open Reading Screen →</button>
+          </div>
         </div>
       </div>
     </main>
@@ -1506,9 +1794,12 @@
               <input type="checkbox" id="chkRecordReadBar" checked>
               Record mic
             </label>
-            <span id="recBadge" class="rec-badge hidden"><span class="rec-dot"></span> REC <span id="recDuration">0:00</span></span>
+            <span id="recBadge" class="rec-badge hidden"><span class="rec-dot"></span> REC <span
+                id="recDuration">0:00</span></span>
             <div class="meter-wrap" id="liveMeterWrap">
-              <div class="meter-track"><div class="meter-fill" id="liveMeterFill"></div></div>
+              <div class="meter-track">
+                <div class="meter-fill" id="liveMeterFill"></div>
+              </div>
               <span class="meter-status" id="liveMeterStatus">Mic idle</span>
             </div>
           </div>
@@ -1555,7 +1846,8 @@
         <aside class="card report-takes-card">
           <h2>
             <span>Recorded Takes</span>
-            <button class="btn" id="btnImportAudio" style="padding:4px 9px; font-size:12px;">Measure Audio File…</button>
+            <button class="btn" id="btnImportAudio" style="padding:4px 9px; font-size:12px;">Measure Audio
+              File…</button>
             <input type="file" id="audioImportInput" accept="audio/*,.wav,.webm,.mp3,.ogg,.m4a" class="hidden">
           </h2>
           <div style="font-size:12px; color:var(--text-muted); flex-shrink:0;">
@@ -1569,7 +1861,8 @@
         </aside>
 
         <section class="card report-detail-card" id="reportDetailCard">
-          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px; flex-shrink:0;">
+          <div
+            style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px; flex-shrink:0;">
             <h2 style="margin:0;">Take Report: <span id="reportTakeName">—</span></h2>
             <div class="inline-field">
               <label for="reportScopeSelect">Measured against:</label>
@@ -1582,7 +1875,8 @@
           </div>
 
           <div id="reportEmptyState" class="report-empty-state">
-            Select a take from the list (or finish a recording) to see overall speed, pause statistics, waveform bands, and coaching advice.
+            Select a take from the list (or finish a recording) to see overall speed, pause statistics, waveform bands,
+            and coaching advice.
           </div>
 
           <div id="reportBody" class="report-body hidden">
@@ -1623,10 +1917,14 @@
               </div>
               <canvas class="waveform-canvas" id="waveformCanvas"></canvas>
               <div class="legend">
-                <span><span class="legend-dot" style="background:rgba(56,189,248,0.38);"></span>Measured pause (0.18–0.50 s)</span>
-                <span><span class="legend-dot" style="background:rgba(34,197,94,0.38);"></span>Measured long pause (≥ 0.50 s)</span>
-                <span><span class="legend-dot" style="border:2px dashed #f59e0b; background:transparent;"></span>Planned pause outline</span>
-                <span><span class="legend-dot" style="background:rgba(148,163,184,0.22);"></span>Ignored leading / trailing silence</span>
+                <span><span class="legend-dot" style="background:rgba(56,189,248,0.38);"></span>Measured pause
+                  (0.18–0.50 s)</span>
+                <span><span class="legend-dot" style="background:rgba(34,197,94,0.38);"></span>Measured long pause (≥
+                  0.50 s)</span>
+                <span><span class="legend-dot" style="border:2px dashed #f59e0b; background:transparent;"></span>Planned
+                  pause outline</span>
+                <span><span class="legend-dot" style="background:rgba(148,163,184,0.22);"></span>Ignored leading /
+                  trailing silence</span>
               </div>
             </div>
 
@@ -1634,22 +1932,30 @@
               <strong style="font-size:13px;">Pause Length Histogram</strong>
               <div class="histogram-grid">
                 <div class="hist-col">
-                  <div class="hist-bar-track"><div class="hist-bar-fill" id="histBar0"></div></div>
+                  <div class="hist-bar-track">
+                    <div class="hist-bar-fill" id="histBar0"></div>
+                  </div>
                   <div class="hist-count" id="histCount0">0</div>
                   <div class="hist-label">0.18 to 0.30 s</div>
                 </div>
                 <div class="hist-col">
-                  <div class="hist-bar-track"><div class="hist-bar-fill" id="histBar1"></div></div>
+                  <div class="hist-bar-track">
+                    <div class="hist-bar-fill" id="histBar1"></div>
+                  </div>
                   <div class="hist-count" id="histCount1">0</div>
                   <div class="hist-label">0.30 to 0.50 s</div>
                 </div>
                 <div class="hist-col">
-                  <div class="hist-bar-track"><div class="hist-bar-fill" id="histBar2" style="background:var(--green);"></div></div>
+                  <div class="hist-bar-track">
+                    <div class="hist-bar-fill" id="histBar2" style="background:var(--green);"></div>
+                  </div>
                   <div class="hist-count" id="histCount2">0</div>
                   <div class="hist-label">0.50 to 0.80 s</div>
                 </div>
                 <div class="hist-col">
-                  <div class="hist-bar-track"><div class="hist-bar-fill" id="histBar3" style="background:var(--green);"></div></div>
+                  <div class="hist-bar-track">
+                    <div class="hist-bar-fill" id="histBar3" style="background:var(--green);"></div>
+                  </div>
                   <div class="hist-count" id="histCount3">0</div>
                   <div class="hist-label">0.80 s and over</div>
                 </div>
@@ -1851,8 +2157,7 @@
         const s = state.settings;
         document.body.setAttribute("data-theme", s.theme);
         el.btnThemeToggle.textContent = s.theme === "dark" ? "Light Theme" : "Dark Theme";
-        el.btnMirrorToggle.textContent = s.mirror ? "Mirror: On" : "Mirror: Off";
-        el.btnMirrorToggle.classList.toggle("btn-active", Boolean(s.mirror));
+        el.btnMirrorToggle.checked = Boolean(s.mirror);
         el.stageContent.classList.toggle("mirrored", Boolean(s.mirror));
         document.documentElement.style.setProperty("--reader-font-size", `${s.fontSizePx}px`);
 
@@ -3066,8 +3371,8 @@
         if (el.viewReport.classList.contains("active")) drawSelectedWaveform();
       });
 
-      el.btnMirrorToggle.addEventListener("click", () => {
-        state.settings.mirror = !state.settings.mirror;
+      el.btnMirrorToggle.addEventListener("change", () => {
+        state.settings.mirror = el.btnMirrorToggle.checked;
         saveSettings();
         syncSettingsToUi();
       });
@@ -3290,5 +3595,186 @@
       updatePlayPauseButton();
     })();
   </script>
+  <!-- AI Script Generator: talks only to the local server (/api/...). No API key is ever in this file. -->
+  <script>
+    (function () {
+      "use strict";
+      const $ = (id) => document.getElementById(id);
+      const btnManual = $("btnModeManual");
+      const btnAi = $("btnModeAi");
+      const panel = $("aiPanel");
+      const drop = $("dropZone");
+      const status = $("aiStatus");
+      const btnGen = $("btnAiGenerate");
+      const paste = $("scriptPaste");
+      if (!btnManual || !btnAi || !panel || !paste) return;
+
+      let available = false;
+
+      function setStatus(msg, isError) {
+        status.textContent = msg;
+        status.classList.toggle("error", Boolean(isError));
+      }
+
+      function setMode(ai) {
+        panel.classList.toggle("hidden", !ai);
+        drop.style.display = ai ? "none" : "";
+        btnAi.classList.toggle("btn-active", ai);
+        btnManual.classList.toggle("btn-active", !ai);
+        if (ai) checkHealth();
+      }
+      btnManual.addEventListener("click", () => setMode(false));
+      btnAi.addEventListener("click", () => setMode(true));
+
+      function applyHealth(ok, keyConfigured) {
+        available = ok && keyConfigured;
+        btnGen.disabled = !available;
+        if (!ok) {
+          setStatus("Generator unavailable. Start it with 'python server.py' and open http://127.0.0.1:8787", true);
+        } else if (!keyConfigured) {
+          setStatus("No API key found. Add GEMINI_API_KEY to the .env file and restart the server.", true);
+        } else {
+          setStatus("Ready.", false);
+        }
+      }
+
+      function checkHealth() {
+        if (location.protocol === "file:") {
+          applyHealth(false, false);
+          return;
+        }
+        fetch("/api/health", { cache: "no-store" })
+          .then((r) => (r.ok ? r.json() : Promise.reject()))
+          .then((j) => applyHealth(true, Boolean(j.keyConfigured)))
+          .catch(() => applyHealth(false, false));
+      }
+      btnGen.disabled = true;
+
+      btnGen.addEventListener("click", async () => {
+        const topic = $("aiTopic").value.trim();
+        if (!topic) {
+          setStatus("Please enter a topic or context.", true);
+          return;
+        }
+        if (paste.value.trim() && !window.confirm("Replace the text currently in the script box with a new generated script?")) {
+          return;
+        }
+        btnGen.disabled = true;
+        setStatus("Generating… this can take 10–30 seconds.", false);
+        try {
+          const res = await fetch("/api/generate-script", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              topic,
+              language: $("aiLang").value,
+              minutes: parseFloat($("aiMinutes").value),
+              sections: parseInt($("aiSections").value, 10),
+              tone: $("aiTone").value,
+            }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || !data.script) throw new Error(data.error || "Generation failed.");
+          paste.value = data.script;
+          // Dry-run with the real parser only to report an estimate; does NOT load the script.
+          let note = "";
+          try {
+            const parsed = window.GuidedReaderCore.parseScript(data.script);
+            note = ` (${parsed.words.length} words, ${parsed.beats.length} sections)`;
+          } catch (e) {
+            note = " — warning: the parser could not read it; please edit it.";
+          }
+          setStatus("Script generated" + note + ". Edit it below, then click Load Script.", false);
+          paste.focus();
+        } catch (err) {
+          setStatus(err.message || "Generation failed.", true);
+        } finally {
+          btnGen.disabled = !available;
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      "use strict";
+      const $ = (id) => document.getElementById(id);
+      const ta = $("scriptPaste");
+      const gutter = $("editorGutter");
+      if (!ta || !gutter) return;
+
+      // ---- Mode buttons (Upload / Paste vs Paste Text) ----
+      const btnManual = $("btnModeManual");
+      const btnAi = $("btnModeAi");
+      const drop = $("dropZone");
+
+      // ---- Line-number gutter that follows wrapped lines ----
+      const mirror = document.createElement("div");
+      mirror.style.cssText = "position:absolute;visibility:hidden;left:-9999px;top:0;white-space:pre-wrap;overflow-wrap:break-word;word-break:normal;";
+      document.body.appendChild(mirror);
+      let lastValue = null;
+      let lastWidth = 0;
+      let lastWpm = null;
+
+      function render() {
+        const cs = getComputedStyle(ta);
+        const width = ta.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        mirror.style.width = width + "px";
+        mirror.style.font = cs.font;
+        mirror.style.lineHeight = cs.lineHeight;
+        const lines = ta.value.split("\n");
+        mirror.innerHTML = "";
+        lines.forEach((l) => {
+          const d = document.createElement("div");
+          d.textContent = l === "" ? "\u200b" : l;
+          mirror.appendChild(d);
+        });
+        const heights = Array.from(mirror.children).map((d) => d.getBoundingClientRect().height);
+        gutter.innerHTML = lines.map((_, i) => '<div style="height:' + heights[i] + 'px">' + (i + 1) + "</div>").join("");
+        gutter.scrollTop = ta.scrollTop;
+        lastValue = ta.value;
+        lastWidth = ta.clientWidth;
+      }
+
+      function countWords(text) {
+        const body = text.split(/\r?\n/);
+        const out = [];
+        for (const line of body) {
+          if (line.trim() === "---") break;
+          if (/^\s*#/.test(line)) continue;
+          out.push(line);
+        }
+        const clean = out.join(" ").replace(/\{#[A-Za-z0-9._-]+\}/g, "").replace(/\[[^\]]*\]/g, " ").trim();
+        return clean ? clean.split(/\s+/).length : 0;
+      }
+
+      function updateCount() {
+        const words = countWords(ta.value);
+        const wpm = parseFloat($("rngTargetWpm").value) || 145;
+        $("editorCount").textContent = words + " words \u2022 " + Math.round(words / wpm) + " min est.";
+        lastWpm = $("rngTargetWpm").value;
+      }
+
+      ta.addEventListener("scroll", () => { gutter.scrollTop = ta.scrollTop; });
+      ta.addEventListener("input", () => { render(); updateCount(); });
+      // Other code sets the box programmatically (file load, sample, AI), so watch for that too.
+      setInterval(() => {
+        if (ta.value !== lastValue || ta.clientWidth !== lastWidth) render();
+        if (ta.value !== lastValue || $("rngTargetWpm").value !== lastWpm) updateCount();
+      }, 250);
+      render();
+      updateCount();
+
+      // ---- Undo / redo / footer clear ----
+      $("btnUndo").addEventListener("click", () => { ta.focus(); document.execCommand("undo"); });
+      $("btnRedo").addEventListener("click", () => { ta.focus(); document.execCommand("redo"); });
+
+      // ---- Edit Plan: open every section and jump to the pace settings ----
+      $("btnEditPlan").addEventListener("click", () => {
+        ["secQuick", "secDisplay", "secPace", "secAudio", "planMore"].forEach((id) => { const d = $(id); if (d) d.open = true; });
+        $("secPace").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    })();
+  </script>
 </body>
+
 </html>

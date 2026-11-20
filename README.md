@@ -63,3 +63,47 @@ Nothing is uploaded anywhere. No server, no build step, and no internet connecti
   ```
   (On Node 20 and earlier, `node --test .` also works; Node 24 expects the file/glob path.)
 - `RECORDING_PROTOCOL.md` — short checklist for recording clean voice-clone takes.
+
+## AI Script Generator (optional, Bring Your Own Gemini API Key)
+
+Generates a reading script from a topic or context using **Google Gemini** (via Google AI Studio). Each contributor uses their own free-tier API key stored locally in `.env`. The key is read only by `server.py` on your machine—it is never exposed to the browser, HTML/JS, or Git.
+
+### 1. Obtain a free Gemini API key
+1. Go to [Google AI Studio API Keys](https://aistudio.google.com/apikey) and sign in with a Google account.
+2. Click **Create API key** and copy the generated key.
+
+### 2. Configure your `.env` file
+Copy `.env.example` to `.env` in the repository root:
+- **Windows (PowerShell):** `Copy-Item .env.example .env`
+- **macOS / Linux:** `cp .env.example .env`
+
+Open `.env` and replace the placeholder with your own key:
+```env
+GEMINI_API_KEY=your_actual_gemini_api_key
+```
+> `.env` is listed in `.gitignore` and excluded from Git tracking. Never commit `.env` or paste a real key into `.env.example` or frontend files.
+
+### 3. Install dependencies
+- **None required to run the app or AI Script Generator.** `server.py` uses Python 3's standard library only (no `pip` or `npm` packages needed).
+- Make sure **Python 3** is installed (`python --version`).
+- *(Optional)* **Node.js** is only needed if you want to run `node --test "*.test.mjs"` for `reader-core.js`.
+
+### 4. Run the application
+- **With AI Script Generator:**
+  ```bash
+  python server.py
+  ```
+  Then open **http://127.0.0.1:8787** in Chrome or Firefox. Click **Generate with AI**, enter a topic, click **Generate Script**, edit the generated text as needed, and click **Load Script**.
+- **Offline mode (without AI):** Opening `index.html` directly still works for all manual upload/paste, teleprompter, recording, and report features.
+- **Run backend tests:**
+  ```bash
+  python -m unittest test_server -v
+  ```
+
+### 5. Troubleshooting API key errors
+- **"Generator unavailable":** You opened `index.html` directly (`file://`) or `server.py` is not running. Start `python server.py` and open `http://127.0.0.1:8787`.
+- **"No API key configured":** `.env` is missing, `GEMINI_API_KEY` is blank, or it still contains the placeholder `your_gemini_api_key_here`. Save `.env` with your real key and restart `python server.py`.
+- **"Gemini rejected the API key or request":** The key in `.env` is invalid, revoked, or has extra quotes/spaces. Verify or regenerate it in Google AI Studio and restart `server.py`.
+- **"Gemini free-tier limit reached" (HTTP 429):** Free-tier rate limit hit; wait a minute and try again.
+- **"Gemini is busy or unavailable" (HTTP 503):** Temporary Google overload (`server.py` automatically retries and falls back to `gemini-flash-lite-latest`). Wait a moment and retry.
+- **"Gemini model '...' was not found" (HTTP 404):** Set a currently supported model name via `GEMINI_MODEL=...` in `.env` and restart `server.py`.
